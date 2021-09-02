@@ -1,23 +1,23 @@
 <idea-plugin>
-    <id>com.roomj.simpletitles</id>
-    <name>Simple Titles</name>
-    <version>1.2</version>
-    <vendor url="https://github.com/tylercal/simple-titles">Tyler Elliott</vendor>
+    <id>com.github.beguy.simpletitles</id>
+    <name>Simple Title</name>
+    <version>1.4</version>
+    <vendor url="https://github.com/beguy/simple-titles">Viktor Kovalev</vendor>
 
     <description><![CDATA[
-      Limit the file part of the window title only include the file name.
-
-      Windows speech recognition fails when a window title is too long, this alleviates the problem.
+      Limit the file part of the window title only include the file name. Remove project name.
     ]]></description>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends optional="true" config-file="git-extension.xml">Git4Idea</depends>
 
     <idea-version since-build="131" />
 
     <extensions defaultExtensionNs="com.intellij">
         <applicationService serviceInterface="com.intellij.openapi.wm.impl.FrameTitleBuilder"
-                            serviceImplementation="com.roomj.simpletitles.SimpleFrameTitleBuilder"
+                            serviceImplementation="com.github.beguy.simpletitles.SimpleFrameTitleBuilder"
                             overrides="true"
         />
+        <projectService serviceImplementation="com.github.beguy.simpletitles.BranchHelper" />
     </extensions>
 </idea-plugin>

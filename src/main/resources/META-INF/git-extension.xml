@@ -1,0 +1,5 @@
+<idea-plugin>
+    <extensions defaultExtensionNs="com.intellij">
+        <postStartupActivity implementation="com.github.beguy.simpletitles.GitListener"/>
+    </extensions>
+</idea-plugin>
