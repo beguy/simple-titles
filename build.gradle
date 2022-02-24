@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'com.github.beguy.simple-titles'
-version '1.4'
+version '1.5'
 
 sourceCompatibility = 1.8
 
@@ -25,6 +25,7 @@ intellij {
 
 patchPluginXml {
     changeNotes """
+      <strong>1.5:</strong> Revert to pr name<br>
       <strong>1.4:</strong> Update<br>
       <strong>1.3:</strong> Actually fix compatibility range<br>
       <strong>1.2:</strong> Try to Fix compatibility range<br>
