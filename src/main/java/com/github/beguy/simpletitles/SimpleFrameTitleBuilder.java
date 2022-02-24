@@ -22,7 +22,7 @@ public class SimpleFrameTitleBuilder extends PlatformFrameTitleBuilder
                 .orElse("");
         String currentBranchWithBraces = currentBranch.isEmpty() ? "" : "[" + currentBranch + "]";
 
-        return Paths.get(project.getBasePath()).getFileName().toString() + currentBranchWithBraces;
+        return project.getName() + currentBranchWithBraces;
     }
 
 
